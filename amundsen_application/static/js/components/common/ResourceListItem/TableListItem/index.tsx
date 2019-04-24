@@ -35,20 +35,20 @@ class TableListItem extends React.Component<TableListItemProps, {}> {
           <img className="icon icon-database icon-color" />
           <div className="content">
             <div className={ hasLastUpdated? "col-sm-9 col-md-10" : "col-sm-12"}>
-              <div id="main-title" className="main-title truncated">{ `${table.schema_name}.${table.name}`}</div>
-              <div id="main-description" className="description truncated">{ table.description }</div>
+              <div id="main-title" className="subtitle-2 truncated">{ `${table.schema_name}.${table.name}`}</div>
+              <div id="main-description" className="body-3 truncated">{ table.description }</div>
             </div>
             {/*<div className={ hasLastUpdated? "hidden-xs col-sm-3 col-md-4" : "hidden-xs col-sm-6"}>*/}
-              {/*<div className="secondary-title">Frequent Users</div>*/}
-              {/*<div className="description truncated">*/}
+              {/*<div className="subtitle-3">Frequent Users</div>*/}
+              {/*<div className="body-3 truncated">*/}
                 {/*<label> </label>*/}
               {/*</div>*/}
             {/*</div>*/}
             {
               hasLastUpdated &&
               <div className="hidden-xs col-sm-3 col-md-2">
-                <div id="secondary-title" className="secondary-title">Latest Data</div>
-                <div id="secondary-description" className="description truncated">
+                <div id="secondary-title" className="subtitle-3">Latest Data</div>
+                <div id="secondary-description" className="body-3 truncated">
                   { this.getDateLabel() }
                 </div>
               </div>

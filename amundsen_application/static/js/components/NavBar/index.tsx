@@ -56,7 +56,7 @@ export class NavBar extends React.Component<NavBarProps, NavBarState> {
                 AppConfig.logoPath &&
                 <img className="logo-icon" src={AppConfig.logoPath} />
               }
-              <Link to={`/`}>
+              <Link to={`/`} className="title-3">
                 AMUNDSEN
               </Link>
             </div>
@@ -65,13 +65,15 @@ export class NavBar extends React.Component<NavBarProps, NavBarState> {
                 AppConfig.navLinks.map((link, index) => {
                   if (link.use_router) {
                     return (
-                      <NavLink id={ link.id } key={ index } to={ link.href } target={ link.target } onClick={logClick}>
+                      <NavLink id={ link.id } key={ index } to={ link.href } className="title-3"
+                               target={ link.target } onClick={logClick}>
                         {link.label}
                       </NavLink>
                     )
                   }
                   return (
-                    <a id={ link.id } key={ index } href={ link.href } target={ link.target } onClick={logClick}>
+                    <a id={ link.id } key={ index } href={ link.href } className="title-3"
+                       target={ link.target } onClick={logClick}>
                       {link.label}
                     </a>
                   )
